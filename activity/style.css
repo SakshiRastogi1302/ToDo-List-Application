@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ToolBar Container */
+.toolbar_container {
+    height: 12vh;
+    background-color: rgba(0, 0, 0, 0.849);
+    display: flex;
+    align-items: center;
+}
+
+/* ColorBar Container*/
+.color_container {
+    height: 3.5rem;
+    width: 12rem;
+    background-color: grey;
+    border-radius: 0.2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    border: 2px solid yellow;
+}
+
+.filter {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.filter_color {
+    height: 1.5rem;
+    width: 1.5rem;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.lightgreen {
+    background-color: lightgreen;
+}
+
+.lightsalmon {
+    background-color: lightsalmon;
+}
+
+.filter .text {
+    visibility: hidden;
+    width: 60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0px;
+    margin-top: 1rem;
+    font-size: 0.6rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.filter:hover .text {
+    visibility: visible;
+}
+
+
+/* Action Container */
+.action_container {
+    height: 3.5rem;
+    width: 8rem;
+    background-color: grey;
+    border-radius: 0.2rem;
+    display: flex;
+    border: 1px solid yellow;
+}
+
+
+.action {
+    width: 50%;
+    height: 100%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid yellow;
+    cursor: pointer;
+}
+
+.action .addText {
+    visibility: hidden;
+}
+
+.action .removeText {
+    visibility: hidden;
+}
+
+.action .text {
+    visibility: hidden;
+    width: 80px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    font-size: 0.6rem;
+    position: absolute;
+    z-index: 1;
+}
+
+.action:hover .text {
+    visibility: visible;
+}
+
+.fas {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.fas:hover {
+    opacity: 0.6
+}
+
+.filter_color:hover {
+    opacity: 0.4
+}
+
+/*Select Container*/
+.filter_todo{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select_container{
+    margin-left: 2rem;
+    position: relative;
+    border: 2px solid yellow;
+}
+
+.filter_todo{
+    color: black;
+    font-weight:bolder;
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    background-color: grey;
+}
+
+.select_container::after{
+    content:"\25BC";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.808);
+    color: white;
+    top: 0;
+    right: 0;
+    padding: 0.4rem;
+    pointer-events: none;
+    opacity: 1;
+    transition: 0.5s;
+
+}
+
+.select_container:hover::after{
+    opacity: 0.7;
+}
+
+
+/* Main Container */
+.main_container {
+    height: 88vh;
+    background-image: linear-gradient(to right, orange, white, orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Task Container */
+.task_container{
+    height: 20rem;
+    width: 40rem;
+    background-color: grey;
+    display: flex;
+    position:absolute;
+    box-shadow: rgb(38, 57, 77) 10px 10px 20px 15px;
+
+}
+.input_container{
+    height: 18.6rem;
+    width: 30rem;
+    background-color: white;
+    position: relative;
+}
+
+.task_content{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 11rem;
+    padding-left:5rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.color_palette{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.task_filter{
+    height: 2rem;
+    width: 4rem;
+    margin-left:3rem;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.task_filter:hover{
+    opacity: 0.6;
+}
+
+/* Clear Input Data */
+.clear {
+    background-color:#f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+    position:absolute;
+    top: 17.3rem;
+    right:0;
+    font-weight: bold;
+  }
+
+.clear:hover{
+    opacity: 0.7;
+}
+
+.date{
+    margin-left: 0.1rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.time{
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 15.7rem;
+}
+
+@media screen and (max-width:640px) {
+    .toolbar_container{
+        width: 100rem;
+    }
+    .main_container{
+        width: 100rem;
+    }
+    .task_container{
+        margin-right: 35rem;
+    }
+}
