@@ -1,81 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- If you want to use fontawesome icons, add the following line inside head section of your html -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Add CSS to HTML -->
     <link rel="stylesheet" href="style.css">
     <title>📑 TODO APP</title>
 </head>
-
 <body>
+    <!---------------------------------- TOOLBAR CONTAINER ------------------------------------------->
     <div class="toolbar_container">
+
+        <!---------------------------------- COLORBAR CONTAINER -------------------------------------->
         <div class="color_container">
+            <!-- FILTER 1 -->
             <div class="filter">
+                <!-- PINK FILTER BOX -->
                 <div class="filter_color pink">
                 </div>
                 <div>
+                    <!-- TEXT SHOWN ON HOVERING FILTER 1 -->
                     <span class="text">Pink</span>
                 </div>
             </div>
+            <!-- FILTER 2 -->
             <div class="filter">
+                <!-- LIGHTBLUE FILTER BOX -->
                 <div class="filter_color lightblue">
                 </div>
                 <div>
+                    <!-- TEXT SHOWN ON HOVERING FILTER 2 -->
                     <span class="text">LightBlue</span>
                 </div>
             </div>
+            <!-- FILTER 3 -->
             <div class="filter">
+                <!-- LIGHTGREEN FILTER BOX -->
                 <div class="filter_color lightgreen">
                 </div>
                 <div>
+                    <!-- TEXT SHOWN ON HOVERING FILTER 3 -->
                     <span class="text">LightGreen</span>
                 </div>
 
             </div>
+            <!-- FILTER 4 -->
             <div class="filter">
+                <!-- LIGHTSALMON FILTER BOX -->
                 <div class="filter_color lightsalmon">
                 </div>
                 <div>
+                    <!-- TEXT SHOWN ON HOVERING FILTER 4 -->
                     <span class="text">LightSalmon</span>
                 </div>
             </div>
+
+
+
         </div>
+
+        <!---------------------------------- ACTION CONTAINER ----------------------------------------->
         <div class="action_container">
+
             <div class="action">
+                <!-- PLUS ICON => TO ADD A NEW TASK -->
                 <div class="add">
                     <i class="fas fa-plus"></i>
                     <div>
+                        <!-- TEXT SHOWN ON HOVERING PLUS ICON -->
                         <span class="text">Add A New Task</span>
                     </div>
                 </div>
             </div>
             <div class="action">
+                <!-- DELETE ICON => TO REMOVE INPUT TASK CONTAINER -->
                 <div class="remove">
                     <i class="fas fa-trash-alt"></i>
                     <div>
-                        <span class="text">Remove A Task</span>
+                        <!-- TEXT SHOWN ON HOVERING DELETE ICON -->
+                        <span class="text">Remove Input Task Container</span>
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <!---------------------------------- SELECT CONTAINER ----------------------------------------->
         <div class="select_container">
             <select class="filter_todo">
+                <!-- Option Value 1 -->
                 <option value="All">All</option>
+                <!-- Option Value 2 -->
                 <option value="Completed">Completed</option>
+                <!-- Option Value 3 -->
                 <option value="Incompleted">Incompleted</option>
             </select>
         </div>
+
     </div>
 
+
+
+    <!---------------------------------- MAIN CONTAINER ---------------------------------------------->
     <div class="main_container">
     
     </div>
 
+    <!-- Short Unique Id JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js" defer></script>
+    <!-- Add JS to HTML -->
     <script src="script.js" defer></script>
 </body>
-
 </html>
