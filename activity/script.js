@@ -152,8 +152,36 @@ function getInputText(e){
                 taskBoxArr[i].remove();
         });
     }
+
+        let lockArr=document.querySelectorAll(".lock");
+        let textArr=document.querySelectorAll(".taskText");
+
+        for(let i=0;i<lockArr.length;i++){
+            lockArr[i].addEventListener("click",toggleLock);
+            textArr[i].addEventListener("click",function(){
+                console.log("CURRENT LOCK",lockArr[i].classList);
+            });
+        }
+        
+        
+
+        
+        }
+
+       
+    }
+
+
+
+// ************************************* MAKE CONTENT EDITABLE **********************************************
+
+// This function makes the task box content editable
+function makeDivContentEditable(taskText){
+    console.log("TEXT"+taskText.classList);
+    taskText.setAttribute("contenteditable","true");
 }
-}
+
+
 
 // *********************************** DISPLAY SPECIFIC TASKS BASED ON COLOR *********************************  
 
@@ -172,13 +200,6 @@ function displayTask(e){
 
 }
 
-// ************************************* MAKE CONTENT EDITABLE **********************************************
-
-// This function makes the task box content editable
-function makeDivContentEditable(e){
-    let taskText=e.currentTarget;
-    taskText.setAttribute("contenteditable","true");
-}
 
 // ****************************** CHANGE THE COLOR OF TASK BOX ON THE BASIS OF PRIORITY **************************
 
@@ -209,3 +230,28 @@ function priorityColor(e){
     }
     
 }
+
+// *************************************** TOGGLING OF LOCK ***********************************************************
+
+// This function toggles the lock
+function toggleLock(e){
+    let lockClicked=e.currentTarget;
+    let textArr=document.querySelector(".taskText");
+    let locks=["fa-lock","fa-unlock-alt"];
+    let idx=0;
+
+    for(let i=0;i<locks.length;i++){
+        if(lockClicked.classList[1]==locks[i]){
+            console.log(lockClicked.classList[1]);
+            idx=i;
+        }
+    }
+
+    if(idx+1<locks.length){
+        lockClicked.setAttribute("class",`fa ${locks[idx+1]} unlock`);
+    }
+    else{
+        lockClicked.setAttribute("class",`fa ${locks[0]} lock`);
+    }
+}
+

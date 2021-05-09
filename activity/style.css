@@ -405,10 +405,6 @@ body {
 }
 
 @media screen and (max-width:400px) {
-    .main_container{
-        height: 100%;
-    }
-
     .task_box{
         min-width: 20rem;
     }
